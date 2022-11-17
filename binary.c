@@ -6,7 +6,7 @@ int main()
     int num = 10;
     // ugyanaz a szam de ezzel nezem meg h milyen hosszu legyen az array
     int testnum = num;
-    // ebbe szamolom h milyen hosszu legyen a hossusagot
+    // ebbe szamolom h milyen hosszu legyen a cucc
     int len = 0;
     
     // while loop ami megnezi h milyen hosszu lesz az array
