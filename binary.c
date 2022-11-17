@@ -2,6 +2,10 @@
 
 int main()
 {
+    // funny code a user inputhoz
+    /*int num;
+    printf("Adj meg egy szamot:");
+    scanf ("%d", &num);*/
     // szam
     int num = 10;
     // ugyanaz a szam de ezzel nezem meg h milyen hosszu legyen az array
