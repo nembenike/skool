@@ -21,7 +21,7 @@ int main(void) {
         int rem = prevNum-arr[1];
         for (int i = 1; i <= n-1; i++){
             // descending?
-            if (prevNum-rem==arr[i]){
+            if (prevNum-rem==arr[i] || prevNum > arr[i]){
                 //printf("descending\n");
                 monDes = true;
                 prevNum = arr[i];
@@ -34,7 +34,7 @@ int main(void) {
         // ascendign?
         int rem = arr[1]-arr[0];
         for (int i = 1; i <= n-1; i++){
-            if (prevNum+rem==arr[i]){
+            if (prevNum+rem==arr[i] || prevNum < arr[i]){
                 //printf("ascending\n");
                 monAsc = true;
                 prevNum = arr[i];
