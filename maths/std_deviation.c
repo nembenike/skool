@@ -3,26 +3,25 @@
 #include <stdlib.h>
 
 int main() {
-    int LENGTH;
     printf("how many numbers do you want to give?\n");
-    scanf("%i", &LENGTH);
+    size_t LENGTH;
+    scanf("%zu", &LENGTH);
     int NUMBERS[LENGTH];
-    float AVERAGE;
-    for(int i = 0; i <= LENGTH-1; i++){
-        printf("give %i. number\n", i+1);
+
+    double NUMSUM = 0;
+    for (size_t i = 0; i < LENGTH; ++i){
+        printf("give %zu. number\n", i+1);
         scanf("%i", &NUMBERS[i]);
+        NUMSUM += NUMBERS[i];
     }
-    int NUMSUM = 0;
-    for (int i = 0; i <= LENGTH-1; i++){
-        NUMSUM = NUMSUM+NUMBERS[i];
-    }
-    AVERAGE = NUMSUM/LENGTH;
-    printf("The average is: %f\n", AVERAGE);
-    float SOMESUM = 0;
-    for (int i = 0; i <= LENGTH-1; i++){
+    double AVERAGE = NUMSUM / LENGTH;
+    printf("The average is: %lf\n", AVERAGE);
+
+    double SOMESUM = 0;
+    for (size_t i = 0; i < LENGTH; ++i){
         SOMESUM += pow(NUMBERS[i]-AVERAGE, 2);
     }
-    float SOMETHING = SOMESUM/LENGTH;
-    float SZORAS = sqrtf(SOMETHING);
-    printf("The standard deviation is: %f\n", SZORAS);
+    double SOMETHING = SOMESUM / LENGTH;
+    double SZORAS = sqrt(SOMETHING);
+    printf("The standard deviation is: %lf\n", SZORAS);
 }
